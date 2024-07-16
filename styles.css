@@ -1,0 +1,340 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #251d30;
+}
+
+header {
+    background-color: #140b2b;
+    color: white;
+    text-align: center;
+    padding: 0.3em 1em;
+}
+
+header h1 {
+    margin-top: 0.1em;
+    margin-bottom: 0.3em;
+}
+
+footer {
+    background-color: #140b2b;
+    color: white;
+    text-align: center;
+    padding: 1em;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    background-color: #140b2b;
+    padding-top: 1em;
+    padding-bottom: 0.5em;
+}
+
+nav a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    padding: 0.5em 1em;
+}
+
+nav a:hover {
+    background-color: #555;
+}
+
+section {
+    padding: 2em;
+    margin: 1em;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(27, 5, 66, 0.1);
+}
+
+.section-title {
+    font-size: 1.5em;
+    margin-bottom: 0.5em;
+    margin-top: -1em;
+    color: #ffffff;
+    text-align: center;
+}
+
+.content {
+    margin-bottom: 2em;
+    color: #ebebeb;
+    text-align: center;
+}
+
+.btn {
+    --border-color: linear-gradient(-45deg, #ffae00, #7e03aa, #00fffb);
+    --border-width: 0.125em;
+    --curve-size: 0.5em;
+    --blur: 30px;
+    --bg: #080312;
+    --color: #afffff;
+    color: var(--color);
+    cursor: pointer;
+    position: relative;
+    isolation: isolate;
+    display: inline-grid;
+    place-content: center;
+    padding: 0.5em 1.5em;
+    font-size: 17px;
+    border: 0;
+    text-transform: uppercase;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.6);
+    clip-path: polygon(
+        0% var(--curve-size),
+        var(--curve-size) 0,
+        100% 0,
+        100% calc(100% - var(--curve-size)),
+        calc(100% - var(--curve-size)) 100%,
+        0 100%
+    );
+    transition: color 250ms;
+}
+
+.btn::after,
+.btn::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+}
+
+.btn::before {
+    background: var(--border-color);
+    background-size: 300% 300%;
+    animation: move-bg7234 5s ease infinite;
+    z-index: -2;
+}
+
+#about-me {
+    background-color: rgba(87, 87, 87, 0.701); /* Fondo semi-blanco */
+    padding: 2em;
+    margin: 1em;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(27, 5, 66, 0.1);
+}
+
+.section-title {
+    font-size: 1.5em;
+    margin-bottom: 0.5em;
+    color: #ffffff;
+    text-align: center;
+}
+
+.content {
+    margin-bottom: 2em;
+    color: #ebebeb;
+    text-align: center;
+    line-height: 1.5em;
+}
+
+@keyframes move-bg7234 {
+    0% {
+        background-position: 31% 0%;
+    }
+    50% {
+        background-position: 70% 100%;
+    }
+    100% {
+        background-position: 31% 0%;
+    }
+}
+
+.btn::after {
+    background: var(--bg);
+    z-index: -1;
+    clip-path: polygon(
+        var(--border-width)
+        calc(var(--curve-size) + var(--border-width) * 0.5),
+        calc(var(--curve-size) + var(--border-width) * 0.5) var(--border-width),
+        calc(100% - var(--border-width)) var(--border-width),
+        calc(100% - var(--border-width))
+        calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5)),
+        calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5))
+        calc(100% - var(--border-width)),
+        var(--border-width) calc(100% - var(--border-width))
+    );
+    transition: clip-path 500ms;
+}
+
+.btn:where(:hover, :focus)::after {
+    clip-path: polygon(
+        calc(100% - var(--border-width))
+        calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5)),
+        calc(100% - var(--border-width)) var(--border-width),
+        calc(100% - var(--border-width)) var(--border-width),
+        calc(100% - var(--border-width))
+        calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5)),
+        calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5))
+        calc(100% - var(--border-width)),
+        calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5))
+        calc(100% - var(--border-width))
+    );
+    transition: 200ms;
+}
+
+.btn:where(:hover, :focus) {
+    color: #fff;
+}
+
+.article {
+    padding: 2em;
+    background-color: white;
+    margin: 1em;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(27, 5, 66, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.article-content {
+    display: flex;
+    flex-direction: row; /* Alinea la imagen y el texto en una fila */
+    align-items: flex-start;
+}
+
+.article-image {
+    max-width: 250px;
+    margin-top: -4em;
+    margin-right: 3em;
+    border-radius: 8px;
+    /* padding-top: -28em; */
+}
+
+.article-text {
+    max-width: 700px;
+}
+
+.title-article {
+    font-size: 2.5em;
+    margin-top: 0;
+    margin-bottom: 0.5em;
+    color: #333;
+    padding-left: 7.4em;
+}
+
+.article-subtitle {
+    font-size: 1.2em;
+    margin-top: 0;
+    margin-bottom: 1em;
+    color: #333;
+}
+
+.article p {
+    margin-top: 0;
+    margin-bottom: 1em;
+    color: #666;
+}
+
+.cards-container {
+    display: flex;
+    gap: 1em;
+    flex-wrap: wrap;
+    align-items: stretch;
+}
+
+.card {
+    width: 190px; /* Ancho fijo */
+    height: 300px; /* Altura fija */
+    background-color: #000;
+    text-align: end;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 12px;
+    gap: 12px;
+    cursor: pointer;
+}
+
+.card img {
+    width: 100%; /* Establece el ancho al 100% del contenedor */
+    height: auto; /* Establece la altura al 100% del contenedor */
+    border-radius: 8px; /* Alinea los bordes redondeados con los de la tarjeta */
+    object-fit: cover; /* La imagen cubrirá completamente el espacio, recortando lo que sobra */
+    object-position: center; /* Centra la imagen dentro del contenedor */
+    transition: transform 0.88s ease;
+    transform: translateY(0%); /* Restablece cualquier transformación anterior */
+}
+
+.card .card-content {
+    width: 100%;
+    position: absolute; /* Asegura que el contenido se sitúe en la parte inferior de la tarjeta */
+    bottom: 5px; /* Espaciado desde el fondo */
+    margin-top: auto; /* Empuja el contenido hacia abajo */
+    left: 0;
+    right: 0;
+    text-align: center; /* Centrar el texto horizontalmente */
+    color: white;
+    padding: 12px 0; /* Añadir algo de padding alrededor del texto */
+    padding-top: 30px; /* Aumenta el padding superior para empujar el contenido hacia abajo */
+    background: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente para mejorar la legibilidad */
+    border-radius: 0 0 8px 8px; /* Redondeo solo en las esquinas inferiores */
+}
+
+.card:hover img {
+    transform: translateY(15%); /* Mueve la imagen hacia arriba al pasar el mouse */
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    left: -5px;
+    margin: auto;
+    width: 200px;
+    height: 264px;
+    border-radius: 10px;
+    background: linear-gradient(-45deg, #e81cff 0%, #40c9ff 100% );
+    z-index: -10;
+    pointer-events: none;
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.card::after {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(-45deg, #fc00ff 0%, #00dbde 100% );
+    transform: translate3d(0, 0, 0) scale(0.95);
+    filter: blur(20px);
+}
+
+.heading {
+    font-size: 20px;
+    text-transform: capitalize;
+    font-weight: 700;
+    margin-top: 0;
+  }
+
+.card .heading {
+    font-size: 20px;
+    text-transform: capitalize;
+    font-weight: 700;
+    text-align: center;
+    margin-top: auto;
+}
+
+.card p:not(.heading) {
+    font-size: 14px;
+}
+
+.card p:last-child {
+    color: #e81cff;
+    font-weight: 600;
+}
+
+.card:hover::after {
+    filter: blur(30px);
+}
+
+.card:hover::before {
+    transform: rotate(-90deg) scaleX(1.34) scaleY(0.77);
+}
