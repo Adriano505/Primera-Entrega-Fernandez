@@ -8,10 +8,10 @@ import FooterBanner from '../components/sections/FooterBanner';
 import PriceFilter from '../components/Filters/PriceFilter';
 
 const products = [
-  { id: 1, image: 'src/assets/img/championes/forum-low-cL.jpg', title: 'Championes Forum Low CL', price:  5990 },
-  { id: 2, image: 'src/assets/img/championes/gazelle-gris.jpg', title: 'Championes Gazelle', price:  5990 },
-  { id: 3, image: 'src/assets/img/championes/gazelle-indoor.jpg', title: 'Championes Gazelle Indoor', price: 6490 },
-  { id: 4, image: 'src/assets/img/championes/superstar.jpg', title: 'Championes Superstar', price: 4990 },
+  { id: 1, image: 'championes/forum-low-cL.jpg', title: 'Championes Forum Low CL', price:  5990 },
+  { id: 2, image: 'championes/gazelle-gris.jpg', title: 'Championes Gazelle', price:  5990 },
+  { id: 3, image: 'championes/gazelle-indoor.jpg', title: 'Championes Gazelle Indoor', price: 6490 },
+  { id: 4, image: 'championes/superstar.jpg', title: 'Championes Superstar', price: 4990 },
 ];
 
 const additionalCards = [
