@@ -6,39 +6,29 @@ import SimpleCard from '../components/ProductCard/SimpleCard';
 import CategoryFilter from '../components/Filters/CategoryFilter';
 import FooterBanner from '../components/sections/FooterBanner';
 import PriceFilter from '../components/Filters/PriceFilter';
+import forumLowImage from '/assets/img/championes/forum-low-cL.jpg';
+import gazelleGrisImage from '/assets/img/championes/gazelle-gris.jpg';
+import gazelleIndoorImage from '/assets/img/championes/gazelle-indoor.jpg';
+import superstarImage from '/assets/img/championes/superstar.jpg';
+import iconosImage from '/assets/img/banners/iconos.jpg';
+import adizeroImage from '/assets/img/banners/adizero.jpg';
+import gazelleBannerImage from '/assets/img/banners/gazelle.jpg';
+import adicolorImage from '/assets/img/banners/adicolor.jpg';
+
+
 
 const products = [
-  { id: 1, image: '../../assets/img/championes/forum-low-cL.jpg', title: 'Championes Forum Low CL', price:  5990 },
-  { id: 2, image: '../../assets/img/championes/gazelle-gris.jpg', title: 'Championes Gazelle', price:  5990 },
-  { id: 3, image: '../../assets/img/championes/gazelle-indoor.jpg', title: 'Championes Gazelle Indoor', price: 6490 },
-  { id: 4, image: '../../assets/img/championes/superstar.jpg', title: 'Championes Superstar', price: 4990 },
+  { id: 1, image: forumLowImage, title: 'Championes Forum Low CL', price: 5990 },
+  { id: 2, image: gazelleGrisImage, title: 'Championes Gazelle', price: 5990 },
+  { id: 3, image: gazelleIndoorImage, title: 'Championes Gazelle Indoor', price: 6490 },
+  { id: 4, image: superstarImage, title: 'Championes Superstar', price: 4990 },
 ];
 
 const additionalCards = [
-  {
-    id: 1,
-    image: 'banners/iconos.jpg',
-    title: 'ÍCONOS DEL MOMENTO',
-    subtitle: 'Para cualquier look.',
-  },
-  {
-    id: 2,
-    image: 'banners/adizero.jpg',
-    title: 'ADIZERP',
-    subtitle: 'Para destacar siempre.',
-  },
-  {
-    id: 3,
-    image: 'banners/gazelle.jpg',
-    title: 'GAZELLE',
-    subtitle: 'Para los más exigentes.',
-  },
-  {
-    id: 4,
-    image: 'banners/adicolor.jpg',
-    title: 'ADICOLOR',
-    subtitle: 'Para cualquier ocasión.',
-  },
+  { id: 1, image: iconosImage, title: 'ÍCONOS DEL MOMENTO', subtitle: 'Para cualquier look.' },
+  { id: 2, image: adizeroImage, title: 'ADIZERP', subtitle: 'Para destacar siempre.' },
+  { id: 3, image: gazelleBannerImage, title: 'GAZELLE', subtitle: 'Para los más exigentes.' },
+  { id: 4, image: adicolorImage, title: 'ADICOLOR', subtitle: 'Para cualquier ocasión.' },
 ];
 
 const popularItems = ['ultraboost', 'adizero', 'supernova', 'superstar', 'gazelle', 'samba'];

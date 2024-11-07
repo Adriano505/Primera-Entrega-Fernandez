@@ -1,5 +1,5 @@
 import React from 'react';
-import footerBannerImage from '../../assets/img/banners/footer1.jpg'; // Ajusta la ruta según tu organización de carpetas
+import footerBannerImage from '/assets/img/banners/footer1.jpg';
 
 function FooterBanner() {
     return (

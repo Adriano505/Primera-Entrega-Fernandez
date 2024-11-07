@@ -1,5 +1,5 @@
 import React from 'react';
-import bannerImage from '../../assets/img/banners/banner.jpg'; // Ruta actualizada
+import bannerImage from '/assets/img/banners/banner.jpg';
 
 function Banner() {
     return (

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useCart } from '../../context/CartContext';
 import Cart from '../Cart/Cart';
+import CartWidget from '../CartWidget/CartWidget'; 
 
 function Navbar() {
   const { getTotalItems } = useCart();
@@ -37,8 +38,9 @@ function Navbar() {
         <a href="#" className="hover:text-gray-400">Mujer</a>
         <a href="#" className="hover:text-gray-400">Niños</a>
       </div>
+      
       <div className="relative cursor-pointer" onClick={toggleCart}>
-        <span className="text-white">🛒</span>
+        <CartWidget />
         {getTotalItems() > 0 && (
           <span className="absolute -top-2 -right-2 bg-red-500 rounded-full text-xs px-2 py-1">
             {getTotalItems()}
